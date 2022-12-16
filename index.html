@@ -41,7 +41,7 @@
         <ul class="contacts">
           <li class="contacts-item">
             <a class="contacts-link" href="mailto:info@devstudio.com">
-              <svg class="contacts-icon" width="20" height="20">
+              <svg class="contacts-icon" width="20" height="18">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
               info@devstudio.com
@@ -49,7 +49,7 @@
           </li>
           <li class="contacts-item">
             <a class="contacts-link" href="tel:+110001111111">
-              <svg class="contacts-icon" width="20" height="20">
+              <svg class="contacts-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +11 (000) 111-11-11
@@ -391,7 +391,7 @@
 
     <footer>
       <div class="container">
-        <div clas="footer-block">
+        <div class="footer-block">
           <div class="logo">
             <a href="./index.html" title="to home"><span>Web</span>Studio</a>
           </div>
@@ -400,7 +400,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div clas="footer-block">
+        <div class="footer-block">
           <h3 class="footer-block-title">Social media</h3>
           <ul class="footer-socials">
             <li>
@@ -433,6 +433,18 @@
             </li>
           </ul>
         </div>
+        <div class="footer-block">
+          <h3 class="footer-block-title">Subscribe</h3>
+          <form class="footer-newsletter">
+            <input type="email" name="email" placeholder="E-mail" />
+            <button type="submit">
+              Subscribe
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -442,6 +454,59 @@
           <svg width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
+        </div>
+        <div class="modal-window-continer">
+          <h3 class="modal-window-title">
+            Leave your contacts and we will call you back
+          </h3>
+          <form name="contact">
+            <div class="form-block">
+              <label>Name</label>
+              <input type="text" name="name" autofocus />
+              <div class="input-icon">
+                <svg width="12" height="12">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-block">
+              <label>Phone</label>
+              <input type="tel" name="phone" />
+              <div class="input-icon">
+                <svg width="13" height="13">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-block">
+              <label>Email</label>
+              <input type="email" name="email" />
+              <div class="input-icon">
+                <svg width="15" height="12">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-block">
+              <label>Comment</label>
+              <textarea name="message" placeholder="Text input"></textarea>
+            </div>
+            <div class="form-privacypolicy-block">
+              <input type="checkbox" name="privacypolicy" value="1" />
+              <div class="checkbox" data-modal-сheckbox>
+                <svg width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </div>
+              <label data-modal-сheckbox-label
+                >I accept the terms and conditions of the
+                <a class="privacypolicy-link" href="" target="_blank"
+                  >Privacy Policy</a
+                ></label
+              >
+            </div>
+            <button type="submit">Send</button>
+          </form>
         </div>
       </div>
     </div>

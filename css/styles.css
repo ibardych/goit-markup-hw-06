@@ -166,6 +166,8 @@ header .contacts-link:focus {
 header .contacts-icon {
   fill: var(--slate-color);
   transition: fill var(--animation-duration) var(--transition-timing-function);
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 header .contacts-link:hover .contacts-icon,
@@ -564,7 +566,6 @@ footer {
 
 footer .container {
   display: flex;
-  column-gap: 120px;
   justify-content: flex-start;
 }
 
@@ -582,6 +583,14 @@ footer .footer-text {
   font-size: 16px;
   line-height: 1.5;
   color: var(--cornflower-color);
+}
+
+footer .footer-block:nth-child(2) {
+  margin-left: 120px;
+}
+
+footer .footer-block:nth-child(3) {
+  margin-left: 80px;
 }
 
 .footer-block-title {
@@ -617,6 +626,54 @@ footer .footer-text {
 .footer-social-icon:hover,
 .footer-social-icon:focus {
   background-color: var(--green);
+}
+
+.footer-newsletter {
+  display: flex;
+  column-gap: 24px;
+}
+
+.footer-newsletter input[name="email"] {
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: 4px;
+  outline: none;
+  background-color: rgb(255 255 255 / 0);
+  padding: 8px 16px;
+  color: rgb(255 255 255 / 0.6);
+  font-size: 12px;
+  line-height: 2;
+  filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));
+}
+
+.footer-newsletter input[name="email"]::placeholder {
+  color: rgb(255 255 255 / 0.6);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.footer-newsletter button[type="submit"] {
+  background-color: var(--brand-color);
+  padding: 8px 24px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color var(--animation-duration)
+    var(--transition-timing-function);
+}
+
+.footer-newsletter button[type="submit"]:focus {
+  background-color: var(--active-color);
+}
+
+.footer-newsletter button[type="submit"] svg {
+  fill: #fff;
 }
 
 /* Modal window */
@@ -688,4 +745,161 @@ footer .footer-text {
   pointer-events: none;
   transition-property: visibility, opacity;
   transition: var(--animation-duration) var(--transition-timing-function);
+}
+
+.modal-window-continer {
+  padding: 72px 24px 24px 24px;
+}
+
+.modal-window-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.modal-window-continer form[name="contact"] {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.modal-window-continer .form-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  position: relative;
+}
+
+.modal-window-continer .form-block label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--light-slate-color);
+}
+
+.modal-window-continer form[name="contact"] input,
+.modal-window-continer form[name="contact"] textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: inherit;
+  outline: inherit;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  transition: border-color var(--animation-duration)
+    var(--transition-timing-function);
+}
+
+.modal-window-continer form[name="contact"] input {
+  padding: 11px 16px 11px 34px;
+}
+
+.modal-window-continer form[name="contact"] .input-icon svg {
+  fill: var(--navi-blue-color);
+  transition: fill var(--animation-duration) var(--transition-timing-function);
+}
+
+.modal-window-continer form[name="contact"] input:focus,
+.modal-window-continer form[name="contact"] textarea:focus {
+  border: 1px solid var(--brand-color);
+}
+
+.modal-window-continer form[name="contact"] input:focus ~ .input-icon svg {
+  fill: var(--brand-color);
+}
+
+.modal-window-continer form[name="contact"] textarea {
+  height: 120px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  resize: none;
+}
+
+.modal-window-continer form[name="contact"] textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-window-continer .form-privacypolicy-block {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-window-continer .form-privacypolicy-block input[type="checkbox"] {
+  display: none;
+}
+
+.modal-window-continer .form-privacypolicy-block .checkbox {
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-window-continer .form-privacypolicy-block .checkbox svg {
+  opacity: 0;
+  fill: var(--cloud-color);
+}
+
+.modal-window-continer .form-privacypolicy-block .checkbox.checked {
+  background-color: var(--brand-color);
+}
+
+.modal-window-continer .form-privacypolicy-block .checkbox.checked svg {
+  opacity: 1;
+}
+
+.modal-window-continer .form-privacypolicy-block label {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+.modal-window-continer .form-privacypolicy-block .privacypolicy-link {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+
+.modal-window-continer form[name="contact"] button[type="submit"] {
+  margin: 0 auto;
+  padding: 16px 66px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.19;
+  border-radius: 4px;
+  background-color: var(--brand-color);
+  outline: invert;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--animation-duration)
+    var(--transition-timing-function);
+}
+
+.modal-window-continer form[name="contact"] button[type="submit"]:focus {
+  background-color: var(--active-color);
+}
+
+.modal-window-continer .form-block .input-icon {
+  position: absolute;
+  width: 18px;
+  height: 24px;
+  bottom: 8px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
