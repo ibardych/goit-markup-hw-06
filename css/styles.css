@@ -727,15 +727,17 @@ footer .footer-block:nth-child(3) {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: box-shadow var(--animation-duration)
-    var(--transition-timing-function);
+  transition-property: border, box-shadow;
+  transition: var(--animation-duration) var(--transition-timing-function);
 }
 
 .modal-window-close svg {
   color: #000;
 }
 
-.modal-window-close:hover {
+.modal-window-close:hover,
+.modal-window-close:focus {
+  border: 1px solid rgb(0 0 0 / 0);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -846,6 +848,7 @@ footer .footer-block:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .modal-window-continer .form-privacypolicy-block .checkbox svg {
