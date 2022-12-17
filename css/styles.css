@@ -561,7 +561,7 @@ header .contacts-link:focus .contacts-icon {
 
 footer {
   padding-block: 100px;
-  background-color: #2f303a;
+  background-color: var(--navi-blue-color);
 }
 
 footer .container {
@@ -643,6 +643,7 @@ footer .footer-block:nth-child(3) {
   font-size: 12px;
   line-height: 2;
   filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.15));
+  width: 264px;
 }
 
 .footer-newsletter input[name="email"]::placeholder {
