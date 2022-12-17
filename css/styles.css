@@ -828,14 +828,25 @@ footer .footer-block:nth-child(3) {
 }
 
 .modal-window-continer .form-privacypolicy-block {
-  display: flex;
-  column-gap: 8px;
-  align-items: center;
   margin-bottom: 16px;
 }
 
+.modal-window-continer .form-privacypolicy-block label {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
 .modal-window-continer .form-privacypolicy-block input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .modal-window-continer .form-privacypolicy-block .checkbox {
@@ -856,19 +867,20 @@ footer .footer-block:nth-child(3) {
   fill: var(--cloud-color);
 }
 
-.modal-window-continer .form-privacypolicy-block .checkbox.checked {
+.modal-window-continer
+  .form-privacypolicy-block
+  input[type="checkbox"]:checked
+  ~ .checkbox {
   background-color: var(--brand-color);
 }
 
-.modal-window-continer .form-privacypolicy-block .checkbox.checked svg {
+.modal-window-continer
+  .form-privacypolicy-block
+  input[type="checkbox"]:checked
+  + .checkbox
+  svg {
+  background-color: var(--brand-color);
   opacity: 1;
-}
-
-.modal-window-continer .form-privacypolicy-block label {
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #757575;
 }
 
 .modal-window-continer .form-privacypolicy-block .privacypolicy-link {
