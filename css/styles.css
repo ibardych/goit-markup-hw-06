@@ -870,7 +870,7 @@ footer .footer-block:nth-child(3) {
 .modal-window-continer
   .form-privacypolicy-block
   input[type="checkbox"]:checked
-  ~ .checkbox {
+  + .checkbox {
   background-color: var(--brand-color);
 }
 
